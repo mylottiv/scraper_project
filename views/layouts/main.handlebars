@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+    <body style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        <div class='blue lighten-3' style='width:auto; height:251px;'>
+            <h1 class='red-text text-accent-4' style="margin-top:0px; padding: 91px; text-align: center; font-style: bold;">
+                <span style='padding: 4px; border:10px solid #d50000; border-radius:10px;'>NintendoNews</span>
+            </h1>
+        </div>
+        {{{body}}}
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems1 = document.querySelectorAll('.fixed-action-btn');
+    var instances1 = M.FloatingActionButton.init(elems1, {
+      direction: 'left',
+      hoverEnabled: false
+    });
+    var elems2 = document.querySelectorAll('.tooltipped');
+    var instances2 = M.Tooltip.init(elems2, {});
+  });
+        </script>
+    </body>
+</html>

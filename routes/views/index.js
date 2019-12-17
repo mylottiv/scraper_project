@@ -1,7 +1,8 @@
 const router = require('express').Router();
+const viewController = require('../../controllers/viewController')
 
-router.get('/', (req, res) => {
-    res.send('test succeess');
-});
+router.get('/', viewController.serveHome);
+
+router.get('/saved', viewController.serveSaved)
 
 module.exports = router;

@@ -1,9 +1,10 @@
 const app = require('express')();
-const axios = require('axios');
-const cheerio = require('cheerio');
 const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 8080;
+
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 app.use(require('./routes'));
 
