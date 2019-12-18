@@ -1,10 +1,14 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 8080;
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
+app.use(express.json()); 
+app.use(express.urlencoded());
 
 app.use(require('./routes'));
 
