@@ -9,7 +9,7 @@ router.get('/articles/:id', apiController.getOneArticle);
 
 router.get('/articles/saved', apiController.getSavedArticles);
 
-router.patch('/save/:id', apiController.saveArticle);
+router.patch('/articles/:id', apiController.saveArticle);
 
 router.patch('/articles/:id/comments/add', apiController.addComment)
 

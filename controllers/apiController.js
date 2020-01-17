@@ -24,11 +24,13 @@ async function scrapeNews(cb) {
             });
             tempArticles = await Promise.all(tempArticles.map( async article => {
                 let test = await Article.findOne(article);
-                if (test !== null) {
+                if (test === null) {
                     return Article.create(article);
+
                 }
                 else {
-                    return console.log('Article already in DB');
+                    console.log('Article already in DB')
+                    return article.id = test.id;
                 }
             }));
             let confirm = await Promise.all(tempArticles);

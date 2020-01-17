@@ -8,7 +8,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use(express.json()); 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 
 app.use(require('./routes'));
 
@@ -27,5 +27,5 @@ db.on('error', function(err){
 });
 
 app.listen(PORT, function() {
-    console.log('fired');
+    console.log('server listening on', PORT);
 });
